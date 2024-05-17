@@ -15,6 +15,7 @@ export class CarritoPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log
   }
 
 }
