@@ -1,13 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Carrito</ion-title>
+<ion-header  [translucent]="true" color="rgb(8, 8, 8)" >
+  <ion-toolbar class="toolbar" mode="ios" >
+    <ion-button style="font-size: 24px;" [routerLink]="['/home']"   slot="start" shape="round" class="boton-transparente" color="rgb(8, 8, 8)">
+     <ion-icon name="chevron-back"></ion-icon>
+    </ion-button>
+    <ion-title style="font-size: 20px;" >
+      Carrito De Compras
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Carrito</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="scroll-container" style=" height: 350px; overflow-y: auto;">
+  <ion-list>
+  <ion-item color="rgb(8, 8, 8)" *ngFor="let item of items" style="margin-bottom: 15px;" >
+    <ion-thumbnail slot="start">
+      <img [src]="item.image"/>
+    </ion-thumbnail>
+    <ion-label>
+      <h2 style="font-size: 12px; ">{{item.name.slice(0, 10)}}</h2>
+      <p style="font-size: 11px;">Total:</p>
+      <p style="font-weight: bold; position: relative; left: 20px; top: -5px;">${{ item.total }} </p>
+    </ion-label>
+
+    <div class="minu" color="rgb(8, 8, 8)" >
+    <ion-button (click)="decreaseQuantity(item)" style="font-weight: bold; font-size: 15px;"  class="boton-invisible" color="rgb(8, 8, 8)">-</ion-button>
+      <p class="cantidad" style=" font-size: 15px;">{{ item.quantity }}</p>
+    <ion-button (click)="increaseQuantity(item)" style="font-weight: bold; font-size: 15px;"  class="boton-invisible2" color="rgb(8, 8, 8)">+</ion-button>
+  </div>
+    <ion-button (click)="removeItem(item)" class="boton-rojo" color="rgb(8, 8, 8)" style="font-size: 23px; font-weight: bold;">-</ion-button>
+  
+  </ion-item>
+  
+  </ion-list>
+</div>
+ <div class="content-text-button">
+  <div class="ubicar-texto">
+    
+    <p style="margin-top: -1%; font-size: 14px;">Total:</p>
+    <p style=" font-size: 20px; font-weight: bold; margin-top: -15%; position: relative; left: 10px;">${{ getTotal() }}</p>
+  
+  </div>
+  <div class="ubicar-boton" >
+    <ion-button [routerLink]="['/comprafinalizada']" class="boton-Compra" style="font-weight: bold;" color="rgb(8, 8, 8)" >Comprar</ion-button>
+  </div>
+</div>
+  
+  
 </ion-content>

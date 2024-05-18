@@ -1,0 +1,94 @@
+ion-item {
+    display: flex;
+    align-items: center;
+    background-color: #E8E6E6;
+    width: 388px;
+    height: 75px;
+    border-radius: 4px;
+    margin-left: 30px;
+    box-shadow: 0 5px 4px rgb(0, 0, 0, 0.2);
+  }
+  
+  ion-thumbnail {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  
+  /*ion-button {
+    margin-left: 10px;
+  }*/
+
+  .boton-transparente{
+    background-color: transparent;
+    color: rgb(10, 10, 10);
+  }
+  .boton-invisible{
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    color: rgb(10, 10, 10);
+    margin-top: -5%;
+    margin-left: 7%;
+  }
+  .boton-invisible2{
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    color: rgb(10, 10, 10);
+    margin-top: -4%;
+    margin-left: 7%;
+  }
+  .minu{
+    display: flex;
+    position: relative;
+    background-color: #9c9b9b;
+    width: 90px;
+    height: 20px;
+    margin-top: 13%;
+    left: 38px;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+
+  .cantidad{
+    margin-top: -0%;
+    margin-left: 34%;
+  }
+
+  .boton-rojo{
+    background-color: #FF0606;
+    border-radius: 3px;
+    color: white;
+    margin-top: -10%;
+  }
+  ion-header{
+    box-shadow: 0 0px 0px transparent;
+  }
+  
+
+  .boton-Compra{
+    background-color: #E8E6E6;
+    color: rgb(10, 10, 10); 
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.2);
+    margin-left: 35px;
+  }
+
+  .content-text-button{
+    display: flex;
+    margin-top: 50px;    
+
+  }
+
+  .ubicar-texto{
+    margin-left: 30px;
+  }
+ 
+  .ubicar-boton{
+    margin-left: 178px;
+    justify-content: right;
+  }
+
+  
